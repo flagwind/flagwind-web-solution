@@ -14,8 +14,8 @@ module.exports =
         vue:
         [
             "vue",
-            "vue-router",
-            "vuex"
+            "vue-router"{{#vuex}},
+            "vuex"{{/vuex}}
         ],
         flagwind:
         [

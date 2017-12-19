@@ -6,9 +6,11 @@ import Workspace from "./workspace";
 
 import Vue from "vue";
 import Router from "vue-router";
-import Vuex from "vuex";
 import routes from "../routes";
+{{#vuex}}
+import Vuex from "vuex";
 import modules from "../store";
+{{/vuex}}
 
 // 导入系统组件
 import { components } from "flagwind-web";
@@ -68,8 +70,10 @@ export default class Workbench extends WorkbenchBase
         // 初始化路由程序
         this.initializeRouter(context);
         
+        {{#vuex}}
         // 初始化状态管理程序
         this.initializeStore(context);
+        {{/vuex}}
         
         // 初始化工作空间
         this._workspace = this.createWorkspace();
@@ -117,6 +121,7 @@ export default class Workbench extends WorkbenchBase
         context.router = router;
     }
     
+    {{#vuex}}
     /**
      * 初始化状态管理程序。
      * @param  {ApplicationContext} context 应用程序上下文实例。
@@ -136,4 +141,5 @@ export default class Workbench extends WorkbenchBase
         // 设置状态容器
         context.store = store;
     }
+    {{/vuex}}
 }
