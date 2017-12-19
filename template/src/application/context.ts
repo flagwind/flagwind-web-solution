@@ -42,6 +42,7 @@ export default class ApplicationContext extends ApplicationContextBase
         this._router = value;
     }
     {{#vuex}}
+    
     /**
      * 获取或设置当前应用的状态管理对象。
      * @property
