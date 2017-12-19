@@ -41,7 +41,6 @@ export default class ApplicationContext extends ApplicationContextBase
 
         this._router = value;
     }
-    
     {{#vuex}}
     /**
      * 获取或设置当前应用的状态管理对象。
@@ -61,7 +60,8 @@ export default class ApplicationContext extends ApplicationContextBase
         }
 
         this._store = value;
-    }{{/vuex}}
+    }
+    {{/vuex}}
 
     /**
      * 获取当前应用程序的上下文实例。

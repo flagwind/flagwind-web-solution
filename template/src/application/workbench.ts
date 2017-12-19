@@ -69,10 +69,10 @@ export default class Workbench extends WorkbenchBase
         
         // 初始化路由程序
         this.initializeRouter(context);
-        
         {{#vuex}}
         // 初始化状态管理程序
-        this.initializeStore(context);{{/vuex}}
+        this.initializeStore(context);
+        {{/vuex}}
         
         // 初始化工作空间
         this._workspace = this.createWorkspace();
@@ -119,7 +119,6 @@ export default class Workbench extends WorkbenchBase
         // 设置路由程序
         context.router = router;
     }
-    
     {{#vuex}}
     /**
      * 初始化状态管理程序。
@@ -139,5 +138,6 @@ export default class Workbench extends WorkbenchBase
         
         // 设置状态容器
         context.store = store;
-    }{{/vuex}}
+    }
+    {{/vuex}}
 }
