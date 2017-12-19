@@ -35,7 +35,9 @@ export default class Workspace extends Vue
         {
             el: "#workspace",
             router: ApplicationContext.current.router,
+            {{#vuex}}
             store: ApplicationContext.current.store,
+            {{/vuex}}
             template: '<div id="workspace"><router-view /></div>'
         };
         

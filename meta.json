@@ -13,8 +13,15 @@
         },
         "author": {
             "type": "string",
-            "label": "作者"
+            "label": "主要作者"
+        },
+        "vuex": {
+            "type": "confirm",
+            "message": "是否安装 vuex?"
         }
     },
-    "completeMessage": "项目创建完毕，请继续执行如下命令:\n\n  cd {{destDirName}}\n  npm install\n npm run build:lib\n  npm run dev"
+    "filters": {
+        "src/store/**/*": "vuex"
+    },
+    "completeMessage": "项目创建完毕，请继续执行如下命令:\n\n cd {{destDirName}}\n npm install\n npm run build:lib\n npm run dev"
 }

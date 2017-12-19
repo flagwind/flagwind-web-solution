@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
+{{#vuex}}
 import Vuex, { Store } from "vuex";
-
+{{/vuex}}
 import flagwind from "flagwind-core";
 import IWorkbench = flagwind.IWorkbench;
 import ApplicationContextBase = flagwind.ApplicationContextBase;
@@ -17,8 +18,10 @@ import Workbench from "./workbench";
 export default class ApplicationContext extends ApplicationContextBase
 {
     private _router: Router;
+    {{#vuex}}
     private _store: Store<any>;
-    
+    {{/vuex}}
+
     /**
      * 获取或设置当前应用的主路由对象。
      * @property
@@ -38,7 +41,8 @@ export default class ApplicationContext extends ApplicationContextBase
 
         this._router = value;
     }
-    
+
+    {{#vuex}}
     /**
      * 获取或设置当前应用的状态管理对象。
      * @property
@@ -58,6 +62,7 @@ export default class ApplicationContext extends ApplicationContextBase
 
         this._store = value;
     }
+    {{/vuex}}
     
     /**
      * 获取当前应用程序的上下文实例。
