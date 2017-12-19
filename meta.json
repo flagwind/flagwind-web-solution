@@ -23,5 +23,5 @@
     "filters": {
         "src/store/**/*": "vuex"
     },
-    "completeMessage": "项目创建完毕，请继续执行如下命令:\n\n cd {{destDirName}}\n npm install\n npm run build:lib\n npm run dev"
+    "completeMessage": "项目创建完毕，请继续执行如下命令:\n\n npm install\n npm run build:lib\n npm run dev"
 }

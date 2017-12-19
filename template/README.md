@@ -14,7 +14,6 @@ $ npm run build:lib
 
 - vue
     - vue
-    - vuex
     - vue-router
 - flagwind
     - flagwind-core

@@ -31,11 +31,10 @@ $ vue init flagwind/flagwind-web-solution
 $ npm run build:lib
 ```
 
-> 默认核心库包含如下内容:
+默认核心库包含如下内容:
 
 - vue
     - vue
-    - vuex
     - vue-router
 - flagwind
     - flagwind-core
