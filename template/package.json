@@ -14,8 +14,8 @@
         "build": "node build/build.js"
     },
     "dependencies": {
-        "flagwind-core": "^1.0.3",
-        "flagwind-web": "^1.0.0",
+        "flagwind-core": "^1.0.7",
+        "flagwind-web": "^1.0.1",
         "vue": "^2.5.7",
         "vue-router": "^3.0.1"{{#vuex}},
         "vuex": "^3.0.1"{{/vuex}}
@@ -67,8 +67,11 @@
         "rimraf": "^2.6.0",
         "semver": "^5.3.0",
         "shelljs": "^0.7.6",
+        "raw-loader": "^0.5.1",
         "sinon": "^4.0.0",
         "sinon-chai": "^2.8.0",
+        "style-loader": "^0.19.0",
+        "css-loader": "^0.28.7",
         "ts-loader": "^3.2.0",
         "tslint": "^5.8.0",
         "tslint-config-flagwind": "^1.0.1",

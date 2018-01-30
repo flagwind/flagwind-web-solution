@@ -64,6 +64,24 @@ module.exports =
                 include: [resolve("src"), resolve("test")]
             },
             {
+                test: /\.less$/,
+                use:
+                [
+                    "style-loader",
+                    "css-loader",
+                    "less-loader"
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use:
+                [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader?sourceMap"
+                ]
+            },
+            {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: "url-loader",
                 options: {
@@ -86,6 +104,10 @@ module.exports =
                     limit: 10000,
                     name: utils.assetsPath("fonts/[name].[hash:7].[ext]")
                 }
+            },
+            {
+                test: /\.(html|tpl)$/,
+                loader: "raw-loader"
             }
         ]
     },
