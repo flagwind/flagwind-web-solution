@@ -64,24 +64,6 @@ module.exports =
                 include: [resolve("src"), resolve("test")]
             },
             {
-                test: /\.less$/,
-                use:
-                [
-                    "style-loader",
-                    "css-loader",
-                    "less-loader"
-                ]
-            },
-            {
-                test: /\.scss$/,
-                use:
-                [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader?sourceMap"
-                ]
-            },
-            {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: "url-loader",
                 options: {
